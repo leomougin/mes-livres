@@ -52,12 +52,13 @@ export const supprimerLivre = id =>{
 
 export const estLu = id =>{
 
-    // 1° Récupérer tous les livres depuis le localStorage
+    // Récupérer tous les livres depuis le localStorage
     const livresJson = localStorage.getItem('livres')
-    // 2° Désérialiser le JSON dans un tableau JavaScript
+    // Désérialiser le JSON dans un tableau JavaScript
     const livres = livresJson ? JSON.parse(livresJson):[]
-    // 3° Changer le livre avec l'id 'id' dans le tableau livre
-    const livreRestants=livres.filter(livre => livre.id !== id)
-    // 4° Sauvegarder le tableau livre dans le localStorage sous la clé "livres"
-    localStorage.setItem("livres",JSON.stringify(livreRestants))
+
+
+
+    // Sauvegarder le tableau livre dans le localStorage sous la clé "livres"
+    localStorage.setItem("livres",JSON.stringify(livres))
 }

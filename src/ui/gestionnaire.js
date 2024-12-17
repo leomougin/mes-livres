@@ -1,6 +1,6 @@
 // Gestionnaires d'évènement
 
-import {insererLivre, supprimerLivre} from "../services/livreService.js";
+import {estLu, insererLivre, supprimerLivre} from "../services/livreService.js";
 import {afficherLivres} from "./render.js";
 
 export const setupGestionnaire =  () => {
@@ -61,6 +61,7 @@ export const setupGestionnaire =  () => {
                 afficherLivres()
             }else if(target.classList.contains("toggle-read-btn")){
                 console.log("Bouton changé !")
+                estLu()
             }
         })
     }
